@@ -19,5 +19,3 @@ module.exports = function(type, options) {
   if (!cast) return pull.through()
   return through(cast(options))
 }
-
-
