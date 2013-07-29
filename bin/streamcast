@@ -18,9 +18,17 @@ var streamcast = require('../')
 pull(
   toPullStream(process.stdin),
   split(program.delimiter),
+  pull.filter(isEmptyString),
   streamcast(type),
   streamcast('string'),
-  pull.map(function(data) {return data + '\n'}),
+  pull.map(appendNewLine),
   toPullStream(process.stdout)
 )
 
+function appendNewLine(data) {
+  return data + '\n'
+}
+
+function isEmptyString(data) {
+  return data !== ''
+}
