@@ -48,13 +48,17 @@ test('can stream through streamcast executable', function(t) {
   child.once('error', function() {
     t.fail('should not error')
   })
+  child.stderr.pipe(process.stderr)
   var stdout = child.stdout
+
   stdout.setEncoding('utf8')
   stdout.pipe(concat(function(data) {
-    t.deepEqual(data, expected.join('\n'))
+    t.deepEqual(data, expected.join('\n') + '\n')
   }))
 
-  input.forEach(function(data) {
-    child.stdin.write(data + '\n')
+  input.forEach(function(data, i) {
+    child.stdin.write(String(data) + '\n')
   })
+  child.stdin.resume()
+  child.stdin.end()
 })
