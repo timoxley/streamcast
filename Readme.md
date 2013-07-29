@@ -1,4 +1,4 @@
-# Device Protocols
+# streamcast
 
 Coerce all stream data to a particular type.
 
