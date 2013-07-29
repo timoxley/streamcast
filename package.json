@@ -1,0 +1,30 @@
+{
+  "name": "streamcast",
+  "version": "0.0.0",
+  "description": "Force stream data formats",
+  "main": "index.js",
+  "bin": {
+    "streamcast": "bin/streamcast"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tim Oxley <secoif@gmail.com> (http://campjs.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "requireindex": "~1.0.1",
+    "through": "~2.3.4",
+    "split": "~0.2.6",
+    "stream-combiner": "0.0.2",
+    "pull-stream": "~2.20.0",
+    "commander": "~2.0.0",
+    "stream-to-pull-stream": "~1.2.2",
+    "pull-stream-to-stream": "~1.2.6",
+    "pull-split": "~0.1.1"
+  },
+  "devDependencies": {
+    "concat-stream": "~1.0.0",
+    "tape": "~1.0.4",
+    "from": "~0.1.3"
+  }
+}

@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+"use strict"
+
+var split = require('pull-split')
+var toPullStream = require('stream-to-pull-stream')
+var pull = require('pull-stream')
+
+var program = require('commander')
+program.option('-d --delimiter [delimiter]', 'incoming stream delimiter', '\n')
+program.option('--output-delimiter [delimiter]', 'output stream delimiter', '\n')
+
+program.parse(process.argv)
+
+var type = program.args[0]
+
+var streamcast = require('../')
+
+pull(
+  toPullStream(process.stdin),
+  split(program.delimiter),
+  streamcast(type),
+  streamcast('string'),
+  pull.map(function(data) {return data + '\n'}),
+  toPullStream(process.stdout)
+)
+
