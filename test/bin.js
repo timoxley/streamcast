@@ -9,7 +9,7 @@ var BIN = __dirname + '/../' + info.bin[info.name]
 
 var input = [
   10,
-  0,
+  1,
   360,
   Math.PI,
   10.4,
@@ -18,15 +18,15 @@ var input = [
   -10.4,
   -10.6,
   -10.5,
-  true,
-  false,
+  1,
+  0,
   '10',
   '0',
   '999.9'
 ]
 var expected = [
   10,
-  0,
+  1,
   360,
   3,
   10,
