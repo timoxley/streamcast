@@ -1,5 +1,10 @@
+# streamcast
+
 Coerce all stream data to a particular type.
 
+[![Build Status](https://travis-ci.org/timoxley/streamcast.png?branch=master)](https://travis-ci.org/timoxley/streamcast)
+[![Dependency Status](https://david-dm.org/timoxley/streamcast.png)](https://david-dm.org/timoxley/streamcast)
+[![NPM](https://nodei.co/npm/streamcast.png)](https://nodei.co/npm/streamcast/)
 
 ## Example
 
