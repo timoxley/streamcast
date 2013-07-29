@@ -1,5 +1,3 @@
-# streamcast
-
 Coerce all stream data to a particular type.
 
 
@@ -17,12 +15,13 @@ Coerce all stream data to a particular type.
 
 
 ```js
+
+// Also supports 'smart' data types.
 pull(
   pull.values([0, '90', 359, '360']),
-  streamcast('degrees'),
+  streamcast('degrees'), // as in a compass
   pull.collect(function(err, array) {
-    console.log(array) // => [0, 90, 359, 0] 
+    console.log(array) // => [0, 90, 359, 0]  // note 360 -> 0
   })
 )
-
 ```
