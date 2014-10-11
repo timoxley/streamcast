@@ -1,7 +1,7 @@
 "use strict"
 
 var test = require('tape')
-var streamcast = require('../')
+var streamcast = require('../').pull
 var pull = require('pull-stream')
 
 test('allows valid values', function(t) {
