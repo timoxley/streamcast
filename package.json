@@ -1,6 +1,6 @@
 {
   "name": "streamcast",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Force stream data formats",
   "main": "index.js",
   "bin": {
