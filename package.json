@@ -12,14 +12,14 @@
   "author": "Tim Oxley <secoif@gmail.com> (http://campjs.com/)",
   "license": "MIT",
   "dependencies": {
-    "requireindex": "~1.0.1",
-    "pull-stream": "~2.20.0",
-    "commander": "~2.0.0",
-    "stream-to-pull-stream": "~1.2.2",
+    "requireindex": "~1.1.0",
+    "pull-stream": "~2.26.0",
+    "commander": "~2.3.0",
+    "stream-to-pull-stream": "~1.4.1",
     "pull-split": "~0.1.1"
   },
   "devDependencies": {
-    "concat-stream": "~1.0.0",
-    "tape": "~1.0.4"
+    "concat-stream": "~1.4.6",
+    "tape": "~3.0.0"
   }
 }
